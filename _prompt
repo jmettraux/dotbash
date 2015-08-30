@@ -90,3 +90,5 @@ function prompt_func () {
 PROMPT_COMMAND=prompt_func
   # bash calls this command to determine the prompt, each time
 
+# vim: set ft=sh:
+

@@ -16,3 +16,6 @@ alias jru='chruby jruby-1.7.19; ruby -v'
 
 alias jr="jruby --dev -G"
 
+
+# vim: set ft=sh:
+

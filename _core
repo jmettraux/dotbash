@@ -65,3 +65,5 @@ function vk() {
 set -o ignoreeof
   # prevent exit on <C-d>
 
+# vim: set ft=sh:
+
