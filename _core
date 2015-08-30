@@ -44,19 +44,6 @@ alias glb='git log --graph --oneline --abbrev-commit --decorate --branches'
 alias gilb='git log --graph --oneline --abbrev-commit --decorate --branches'
 alias gic='git shortlog -s -n'
 
-alias rv='ruby -v'
-alias wr='which ruby'
-
-alias bx='bundle exec'
-alias bxr='bundle exec ruby'
-alias bxs='bundle exec rspec'
-alias bxk='bundle exec rake'
-alias bxw='bundle exec warble'
-alias jru='chruby jruby-1.7.19; ruby -v'
-#alias bo="EDITOR=\"vim -c ':e blank.txt' -c ':NERDTreeToggle'\" bundle open"
-
-alias jr="jruby --dev -G"
-
 #alias map="ak \"(\bmodule .|\bclass .|\bdef .|\bprotected)\" "
 
 
