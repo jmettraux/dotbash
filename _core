@@ -1,0 +1,80 @@
+
+export PATH=$PATH:/sbin:~/bin:bin
+export EDITOR=vim
+
+if [ "$TERM" = "xterm" ]; then
+  TERM="xterm-256color"
+fi
+
+
+#
+# grep
+
+export GREP_OPTIONS='--color=auto'
+
+alias gr='grep -R -n --exclude-dir=.git'
+alias ak='grep -R -n --exclude-dir=.git'
+
+#export LANG=en_US.UTF-8
+#export LC_CTYPE=en_US.UTF-8
+
+
+#
+# aliases
+
+alias ll='ls -al'
+alias lh='ls -alh'
+alias llh='ls -alh'
+alias la='ls -A'
+alias l='ls -CF'
+alias t='tree'
+
+#alias gu='git status'
+alias giu='git status'
+#alias gd='git diff'
+alias gid='git diff'
+#alias gds='git diff --stat'
+alias gids='git diff --stat'
+alias gdp='git diff --patience'
+alias gis='git show'
+alias giss='git show --stat'
+#alias gl='git log --graph --oneline --abbrev-commit --decorate'
+alias gil='git log --graph --oneline --abbrev-commit --decorate'
+alias glb='git log --graph --oneline --abbrev-commit --decorate --branches'
+alias gilb='git log --graph --oneline --abbrev-commit --decorate --branches'
+alias gic='git shortlog -s -n'
+
+alias rv='ruby -v'
+alias wr='which ruby'
+
+alias bx='bundle exec'
+alias bxr='bundle exec ruby'
+alias bxs='bundle exec rspec'
+alias bxk='bundle exec rake'
+alias bxw='bundle exec warble'
+alias jru='chruby jruby-1.7.19; ruby -v'
+#alias bo="EDITOR=\"vim -c ':e blank.txt' -c ':NERDTreeToggle'\" bundle open"
+
+alias jr="jruby --dev -G"
+
+#alias map="ak \"(\bmodule .|\bclass .|\bdef .|\bprotected)\" "
+
+
+#
+# vim
+
+function ff() {
+  vim -c ":cd ${1-.} | Explore ."
+}
+
+function vk() {
+  vim -c ":Ak $1 $2"
+}
+
+
+#
+# over
+
+set -o ignoreeof
+  # prevent exit on <C-d>
+
