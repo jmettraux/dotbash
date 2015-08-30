@@ -43,7 +43,7 @@ function parse_git_branch {
   fi
 
   # Set arrow icon based on status against remote.
-  remote_pattern="# Your branch is (.*) of"
+  remote_pattern="Your branch is (.*) of"
   if [[ ${git_status} =~ ${remote_pattern} ]]; then
     if [[ ${BASH_REMATCH[1]} == "ahead" ]]; then
       remote="↑"
@@ -51,13 +51,13 @@ function parse_git_branch {
       remote="↓"
     fi
   fi
-  diverge_pattern="# Your branch and (.*) have diverged"
+  diverge_pattern="Your branch and (.*) have diverged"
   if [[ ${git_status} =~ ${diverge_pattern} ]]; then
     remote="↕"
   fi
 
   # Get the name of the branch.
-  branch_pattern="^# On branch ([^${IFS}]*)"
+  branch_pattern="On branch ([^${IFS}]+)"
   if [[ ${git_status} =~ ${branch_pattern} ]]; then
     branch=${BASH_REMATCH[1]}
   fi
@@ -81,7 +81,8 @@ function prompt_func () {
   #PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \[\033[00m\]$(parse_git_branch)$(prompt_symbol $last_return_value) "
   user=$USER
   if [[ $USER == "jmettraux" ]]; then
-    user="め"
+    #user="め"
+    user="我"
   fi
   PS1="$(date "+%H%M%S") \h \[\033[01;32m\]$user \w \[\033[00m\]$(parse_git_branch)$(prompt_symbol $last_return_value) "
 }
