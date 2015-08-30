@@ -20,5 +20,6 @@ to get started on a system.
 
 MIT if it's worth it.
 
-Note that the git prompt code under `_prompt` comes from somewhere... I can't remember where and I can't indicate the original license, not give credit where it's due. Sorry.
+Most of the code under _prompt comes from http://gist.github.com/31934 and http://gist.github.com/70150
+The original license applies. Many thanks to the original authors.
 
