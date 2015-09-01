@@ -58,6 +58,11 @@ function vk() {
   vim -c ":Ak $1 $2"
 }
 
+function fv() {
+  vim `find . -name ${1} | head -1`
+}
+alias vf=fv
+
 
 #
 # over
