@@ -22,18 +22,14 @@ alias ak='grep -R -n --exclude-dir=.git'
 #
 # ls
 
+eval `dircolors` # Linux
 export CLICOLOR=1 # OSX
 
-_LS_COLOURS=''
-if [ `uname` == 'Linux' ]; then
-  _LS_COLOURS='--color=auto'
-fi
-
-alias ll='ls -al ${_LS_COLOURS}'
-alias lh='ls -alh ${_LS_COLOURS}'
-alias llh='ls -alh ${_LS_COLOURS}'
-alias la='ls -A ${_LS_COLOURS}'
-alias l='ls -CF ${_LS_COLOURS}'
+alias ll='ls -al'
+alias lh='ls -alh'
+alias llh='ls -alh'
+alias la='ls -A'
+alias l='ls -CF'
 alias t='tree'
 
 
