@@ -1,0 +1,14 @@
+
+set editing-mode vi
+
+$if mode=vi
+
+    set keymap vi-command
+    "\C-j": vi-insertion-mode
+
+    set keymap vi-insert
+    "\C-j": vi-movement-mode
+$endif
+
+# not a Bash configuration, placed it in my dotbash repo anyway
+
