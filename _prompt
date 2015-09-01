@@ -69,9 +69,10 @@ function parse_git_branch {
 function prompt_symbol () {
   # Set color of dollar prompt based on return value of previous command.
   if test $1 -eq 0; then
-      echo "〒"
+      #echo "〒"
+      echo ${_DOLLAR_CHAR}
   else
-      echo "${RED}〒${COLOR_NONE}"
+      echo "${RED}${_DOLLAR_CHAR}${COLOR_NONE}"
   fi
 }
 
@@ -82,7 +83,8 @@ function prompt_func () {
   user=$USER
   if [[ $USER == "jmettraux" ]]; then
     #user="め"
-    user="我"
+    #user="我"
+    user=$_USER_CHAR
   fi
   PS1="$(date "+%H%M%S") \h \[\033[01;32m\]$user \w \[\033[00m\]$(parse_git_branch)$(prompt_symbol $last_return_value) "
 }
