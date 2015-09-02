@@ -13,7 +13,10 @@ fi
 export GREP_OPTIONS='--color=auto'
 
 alias gr='grep -R -n --exclude-dir=.git'
-alias ak='grep -R -n --exclude-dir=.git'
+
+function ak() {
+  grep -R -n --exclude-dir=.git ${1} ${2-.}
+}
 
 #export LANG=en_US.UTF-8
 #export LC_CTYPE=en_US.UTF-8
