@@ -66,6 +66,9 @@ function parse_git_branch {
   echo "${state}(${branch})${remote}${COLOR_NONE} "
 }
 
+_DOLLAR_CHAR="${_DOLLAR_CHAR-〒}"
+_USER_CHAR="${_USER_CHAR-我}"
+
 function prompt_symbol () {
   # Set color of dollar prompt based on return value of previous command.
   if test $1 -eq 0; then

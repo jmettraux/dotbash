@@ -1,6 +1,5 @@
 
 # .gitignore
 
-_local
-_*.local
+_local*
 

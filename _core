@@ -83,13 +83,6 @@ alias vf=fv
 
 
 #
-# for the _prompt coming next, override in _prompt.local
-
-_DOLLAR_CHAR="〒"
-_USER_CHAR="我"
-
-
-#
 # over
 
 set -o ignoreeof
