@@ -15,7 +15,11 @@ export GREP_OPTIONS='--color=auto'
 alias gr='grep -R -n --exclude-dir=.git'
 
 function ak() {
-  grep -R -n --exclude-dir=.git ${1} ${2-.}
+  if [ $# -eq 1 ]; then
+    grep -R -n --exclude-dir=.git "$@" .
+  else
+    grep -R -n --exclude-dir=.git "$@"
+  fi
 }
 
 #export LANG=en_US.UTF-8
