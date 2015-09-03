@@ -77,7 +77,12 @@ function ff() {
 }
 
 function vk() {
-  vim -c ":Ak $1 $2"
+  # TODO investigate why :Ak doesn't add the dot :-(
+  if [ $# -eq 1 ]; then
+    vim -c ":Ak \"$1\" ."
+  else
+    vim -c ":Ak \"$1\" $2"
+  fi
 }
 
 function fv() {
