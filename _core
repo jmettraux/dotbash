@@ -96,6 +96,8 @@ alias vf=fv
 
 function dotgrade() {
 
+  odir=`pwd`
+
   echo
   echo "upgrading ~/.vim ..."
   cd ~/.vim && \
@@ -110,6 +112,22 @@ function dotgrade() {
   source ~/.bash/bashrc
 
   echo
+  cd $odir
+}
+
+function dottus() {
+
+  odir=`pwd`
+
+  echo
+  echo ".vim   ========================================================================="
+  cd ~/.vim && git status
+
+  echo
+  echo ".bash  ========================================================================="
+  cd ~/.bash && git status
+
+  cd $odir
 }
 
 #
