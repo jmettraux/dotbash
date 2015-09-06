@@ -96,6 +96,7 @@ alias vf=fv
 
 function dotsource() {
 
+  echo "source ~/.bash/bashrc"
   source ~/.bash/bashrc
 }
 
@@ -104,13 +105,13 @@ function dotgrade() {
   odir=`pwd`
 
   echo
-  echo "upgrading ~/.vim ..."
+  echo ".vim   v========================================================================"
   cd ~/.vim && \
     git pull --verbose && \
     git log --graph --oneline --abbrev-commit --decorate -1
 
   echo
-  echo "upgrading ~/.bash ..."
+  echo ".bash  v========================================================================"
   cd ~/.bash && \
     git pull --verbose && \
     git log --graph --oneline --abbrev-commit --decorate -1
@@ -125,11 +126,11 @@ function dottus() {
   odir=`pwd`
 
   echo
-  echo ".vim   ========================================================================="
+  echo ".vim   .========================================================================"
   cd ~/.vim && git status
 
   echo
-  echo ".bash  ========================================================================="
+  echo ".bash  .========================================================================"
   cd ~/.bash && git status
 
   echo
