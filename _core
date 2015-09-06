@@ -73,7 +73,7 @@ alias gic='git shortlog -s -n'
 # vim
 
 function ff() {
-  vim -c ":cd ${1-.} | Explore ."
+  vim -c ":cd ${1-.} | Explore . | call NetrwOpenDirs([ 'lib', 'src', 'spec' ])"
 }
 
 function vk() {
