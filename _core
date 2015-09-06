@@ -94,6 +94,11 @@ alias vf=fv
 #
 # dotgrade
 
+function dotsource() {
+
+  source ~/.bash/bashrc
+}
+
 function dotgrade() {
 
   odir=`pwd`
@@ -109,7 +114,7 @@ function dotgrade() {
   cd ~/.bash && \
     git pull --verbose && \
     git log --graph --oneline --abbrev-commit --decorate -1
-  source ~/.bash/bashrc
+  dotsource
 
   echo
   cd $odir
@@ -127,6 +132,7 @@ function dottus() {
   echo ".bash  ========================================================================="
   cd ~/.bash && git status
 
+  echo
   cd $odir
 }
 
