@@ -92,6 +92,27 @@ alias vf=fv
 
 
 #
+# dotgrade
+
+function dotgrade() {
+
+  echo
+  echo "upgrading ~/.vim ..."
+  cd ~/.vim && \
+    git pull --verbose && \
+    git log --graph --oneline --abbrev-commit --decorate -1
+
+  echo
+  echo "upgrading ~/.bash ..."
+  cd ~/.bash && \
+    git pull --verbose && \
+    git log --graph --oneline --abbrev-commit --decorate -1
+  source ~/.bash/bashrc
+
+  echo
+}
+
+#
 # over
 
 set -o ignoreeof
