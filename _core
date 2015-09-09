@@ -45,6 +45,7 @@ alias llh="ls -alh ${_LSCOL}"
 alias la="ls -A ${_LSCOL}"
 alias l="ls -CF ${_LSCOL}"
 alias t='tree'
+alias th='tree -h'
 
 
 #
