@@ -6,6 +6,9 @@ if [ "$TERM" = "xterm" ]; then
   TERM="xterm-256color"
 fi
 
+export HISTCONTROL=ignoreboth
+  # which comprises `ignoredups` and `ignorespaces`
+
 
 #
 # grep
