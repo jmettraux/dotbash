@@ -91,6 +91,8 @@ function fv() {
 }
 alias vf=fv
 
+alias :e=vim
+
 
 #
 # dotgrade
