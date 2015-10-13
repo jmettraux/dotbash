@@ -72,6 +72,10 @@ alias gic='git shortlog -s -n'
 
 #alias map="ak \"(\bmodule .|\bclass .|\bdef .|\bprotected)\" "
 
+if [ `uname` == 'Darwin' ]; then
+  alias eject='diskutil unmount'
+fi
+
 
 #
 # vim
