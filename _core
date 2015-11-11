@@ -76,6 +76,9 @@ if [ `uname` == 'Darwin' ]; then
   alias eject='diskutil unmount'
 fi
 
+alias pc='qpdf --check'
+alias vic="vim -c 'execute \"silent !echo \" . &fileencoding | q'"
+
 
 #
 # vim
