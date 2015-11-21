@@ -19,9 +19,9 @@ alias gr='grep -R -n --exclude-dir=.git'
 
 function ak() {
   if [ $# -eq 1 ]; then
-    grep -R -n --exclude-dir=.git "$@" .
+    grep -R -n --exclude-dir=.git -E "$@" .
   else
-    grep -R -n --exclude-dir=.git "$@"
+    grep -R -n --exclude-dir=.git -E "$@"
   fi
 }
 
@@ -76,8 +76,13 @@ if [ `uname` == 'Darwin' ]; then
   alias eject='diskutil unmount'
 fi
 
-alias pc='qpdf --check'
 alias vic="vim -c 'execute \"silent !echo \" . &fileencoding | q'"
+alias pc='qpdf --check'
+
+function pcc() {
+  vim -c 'execute "silent !echo " . &fileencoding | q' $1
+  qpdf --check $1
+}
 
 
 #
