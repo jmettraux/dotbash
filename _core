@@ -119,6 +119,8 @@ function fv() {
 }
 alias vf=fv
 
+alias vo='vim -c "ListOld"'
+
 alias :e=vim
 
 
