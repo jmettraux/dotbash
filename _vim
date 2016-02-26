@@ -1,0 +1,33 @@
+
+#
+# _vim
+
+alias :e=vim
+
+alias vic="vim -c 'execute \"silent !echo \" . &fileencoding | q'"
+
+function ff() {
+  vim -c ":cd ${1-.} | call feedkeys('ff')"
+}
+
+function vk() {
+  # TODO investigate why :Ak doesn't add the dot :-(
+  if [ $# -eq 1 ]; then
+    vim -c ":Ak \"$1\" ."
+  else
+    vim -c ":Ak \"$1\" $2"
+  fi
+}
+
+function fv() {
+  #vim `find . -name ${1} | head -1`
+  vim `find . -name "*${1}*" | head -1`
+}
+alias vf=fv
+
+alias vo='vim -c "ListFiles"'
+alias vn='vim -c "call feedkeys(\";n\")"'
+
+
+# vim: set ft=sh:
+

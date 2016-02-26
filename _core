@@ -89,39 +89,12 @@ if [ `uname` == 'Darwin' ]; then
   alias eject='diskutil unmount'
 fi
 
-alias vic="vim -c 'execute \"silent !echo \" . &fileencoding | q'"
 alias pc='qpdf --check'
 
 function pcc() {
   vim -c 'execute "silent !echo " . &fileencoding | q' $1
   qpdf --check $1
 }
-
-
-#
-# vim
-
-function ff() {
-  vim -c ":cd ${1-.} | call feedkeys('ff')"
-}
-
-function vk() {
-  # TODO investigate why :Ak doesn't add the dot :-(
-  if [ $# -eq 1 ]; then
-    vim -c ":Ak \"$1\" ."
-  else
-    vim -c ":Ak \"$1\" $2"
-  fi
-}
-
-function fv() {
-  vim `find . -name ${1} | head -1`
-}
-alias vf=fv
-
-alias vo='vim -c "ListFiles"'
-
-alias :e=vim
 
 
 #
