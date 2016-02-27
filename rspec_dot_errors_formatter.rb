@@ -1,5 +1,5 @@
 
-require 'stringio' # else Munemo complains...
+#require 'stringio' # else Munemo complains...
 
 
 class DotErrorsFormatter
