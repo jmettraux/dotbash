@@ -2,7 +2,7 @@
 require 'stringio' # else Munemo complains...
 
 
-class DotErrorFormatter
+class DotErrorsFormatter
 
   RSpec::Core::Formatters.register self, :dump_failures
 
