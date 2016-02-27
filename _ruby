@@ -7,14 +7,21 @@ alias rv='ruby -v'
 alias wr='which ruby'
 
 alias bx='bundle exec'
+
 alias bxr='bundle exec ruby'
+#alias bxs='bundle exec rspec --require ~/.bash/rspec_dot_errors_formatter.rb --format DotErrorsFormatter --out .errors --format d'
 alias bxs="bundle exec rspec \
     --require ~/.bash/rspec_dot_errors_formatter.rb \
     --format DotErrorsFormatter --out .errors \
     --format d"
-#alias bxs='bundle exec rspec --require ~/.bash/rspec_dot_errors_formatter.rb --format DotErrorsFormatter --out .errors --format d'
+alias bxsl="bundle exec rspec \
+    --require ~/.bash/rspec_dot_errors_formatter.rb \
+    --format DotErrorsFormatter --out .errors \
+    --format d `tail -1 .errors`"
+
 alias bxk='bundle exec rake'
 alias bxw='bundle exec warble'
+
 alias jru='chruby jruby-1.7.19; ruby -v'
 #alias bo="EDITOR=\"vim -c ':e blank.txt' -c ':NERDTreeToggle'\" bundle open"
 
