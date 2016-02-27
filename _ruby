@@ -14,10 +14,16 @@ alias bxs="bundle exec rspec \
     --require ~/.bash/rspec_dot_errors_formatter.rb \
     --format DotErrorsFormatter --out .errors \
     --format d"
+alias bxsf="bundle exec rspec \
+    --require ~/.bash/rspec_dot_errors_formatter.rb \
+    --format DotErrorsFormatter --out .errors \
+    --format d \
+    `head -1 .errors`"
 alias bxsl="bundle exec rspec \
     --require ~/.bash/rspec_dot_errors_formatter.rb \
     --format DotErrorsFormatter --out .errors \
-    --format d `tail -1 .errors`"
+    --format d \
+    `tail -1 .errors`"
 
 alias bxk='bundle exec rake'
 alias bxw='bundle exec warble'
