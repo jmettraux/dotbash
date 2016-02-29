@@ -27,6 +27,7 @@ alias vf=fv
 
 alias vo='vim -c "ListFiles"'
 alias vn='vim -c "call feedkeys(\";n\")"'
+alias vt='vim -c "call feedkeys(\";t\")"'
 
 
 # vim: set ft=sh:
