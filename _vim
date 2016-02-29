@@ -10,12 +10,12 @@ function ff() {
   vim -c ":cd ${1-.} | call feedkeys('ff')"
 }
 
-function vk() {
-  # TODO investigate why :Ak doesn't add the dot :-(
+function vg() {
+  # TODO investigate why :Vg doesn't add the dot :-(
   if [ $# -eq 1 ]; then
-    vim -c ":Ak \"$1\" ."
+    vim -c ":Vg \"$1\" ."
   else
-    vim -c ":Ak \"$1\" $2"
+    vim -c ":Vg \"$1\" $2"
   fi
 }
 
