@@ -25,9 +25,10 @@ function fv() {
 }
 alias vf=fv
 
-alias vo='vim -c "ListFiles"'
-alias vn='vim -c "call feedkeys(\";n\")"'
-alias vt='vim -c "call feedkeys(\";t\")"'
+alias vo='vim -c "ListFiles"' # old
+alias vb='vim -c "ListFiles"' # buffers
+alias vn='vim -c "call feedkeys(\";n\")"' # .notes.md
+alias vt='vim -c "call feedkeys(\";t\")"' # .todo.md
 
 
 # vim: set ft=sh:
