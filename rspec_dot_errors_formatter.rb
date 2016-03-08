@@ -14,8 +14,15 @@ class DotErrorsFormatter
   def dump_failures(notification)
 
     notification.failure_notifications.each do |fn|
-      m = fn.formatted_backtrace.first.match(/\A([^:]+:\d+):in /)
-      @output << m[1] << "\n"
+
+      fn.formatted_backtrace.each do |l|
+
+        if m = l.match(/\A([^:]+:\d+)/)
+          @output << m[1] << "\n"
+          break
+        end
+      end
+
       #@output << "  +--> " << fn.description << "\n"
     end
   end
