@@ -13,6 +13,7 @@ alias bxr='bundle exec ruby'
 alias bxs="bundle exec rspec \
     --require ~/.bash/rspec_dot_errors_formatter.rb \
     --format DotErrorsFormatter --out .errors \
+    --format d --out .rspec.out \
     --format d"
 #alias bxsf="bundle exec rspec \
 #    --require ~/.bash/rspec_dot_errors_formatter.rb \
