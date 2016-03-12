@@ -29,6 +29,7 @@ alias vo='vim -c "ListFiles"' # old
 alias vb='vim -c "ListFiles"' # buffers
 alias vn='vim -c "call feedkeys(\";n\")"' # .notes.md
 alias vt='vim -c "call feedkeys(\";t\")"' # .todo.md
+alias vp='vim -c "OpenPrevious"' # open previous file
 
 
 # vim: set ft=sh:
