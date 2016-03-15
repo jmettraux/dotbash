@@ -17,14 +17,13 @@ export GREP_OPTIONS='--color=auto'
 
 alias gr='grep -R -n --exclude-dir=.git'
 
-function ag() {
+function gg() {
   if [ $# -eq 1 ]; then
     grep -R -n --exclude-dir=.git -E "$@" .
   else
     grep -R -n --exclude-dir=.git -E "$@"
   fi
 }
-alias ak=ag
 
 #export LANG=en_US.UTF-8
 #export LC_CTYPE=en_US.UTF-8
