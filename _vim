@@ -18,12 +18,14 @@ function vg() {
     vim -c ":Vg \"$1\" $2"
   fi
 }
+alias Vg=vg
 
 function fv() {
   #vim `find . -name ${1} | head -1`
   vim `find . -name "*${1}*" | head -1`
 }
 alias vf=fv
+alias Vf=fv
 
 alias vo='vim -c "ListFiles"' # old
 alias vb='vim -c "ListFiles"' # buffers
