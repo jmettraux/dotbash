@@ -85,6 +85,8 @@ alias gic='git shortlog -s -n'
 
 #alias map="ak \"(\bmodule .|\bclass .|\bdef .|\bprotected)\" "
 
+alias vr='pandoc README.md > readme.html && open readme.html'
+
 if [ `uname` == 'Darwin' ]; then
   alias eject='diskutil unmount'
 fi
