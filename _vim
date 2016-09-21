@@ -15,7 +15,7 @@ function vg() {
   if [ $# -eq 1 ]; then
     vim -c ":Vg \"$1\" ."
   else
-    vim -c ":Vg \"$1\" $2"
+    vim -c ":Vg \"$1\" ${@:2}"
   fi
 }
 alias Vg=vg
