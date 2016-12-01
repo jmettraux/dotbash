@@ -25,6 +25,7 @@ alias bxs="bundle exec rspec \
 #    --format DotErrorsFormatter --out .errors \
 #    --format d \
 #    `tail -1 .errors`"
+alias bxdr="bundle exec rspec --dry-run"
 
 alias bxk='bundle exec rake'
 alias bxw='bundle exec warble'
