@@ -17,7 +17,7 @@ class DotErrorsFormatter
 
       fn.formatted_backtrace.each do |l|
 
-        if m = l.match(/\A([^:]+:\d+)/)
+        if m = l.match(/\A([^:]+_spec\.rb:\d+)/)
           @output << m[1] << "\n"
           break
         end
