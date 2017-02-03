@@ -39,6 +39,10 @@ function vF() {
 }
 alias VF=vF
 
+function Vt() {
+  vim -c ":Vt $1"
+}
+
 
 # vim: set ft=sh:
 
