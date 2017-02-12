@@ -82,6 +82,8 @@ alias gil='git log --graph --oneline --abbrev-commit --decorate'
 alias glb='git log --graph --oneline --abbrev-commit --decorate --branches'
 alias gilb='git log --graph --oneline --abbrev-commit --decorate --branches'
 alias gic='git shortlog -s -n'
+alias gad='git add'
+alias gadd='git add'
 
 #alias map="ak \"(\bmodule .|\bclass .|\bdef .|\bprotected)\" "
 
