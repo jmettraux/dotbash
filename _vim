@@ -26,6 +26,7 @@ function fv() {
 }
 alias vf=fv
 alias Vf=fv
+alias v=fv
 
 alias vo='vim -c "ListFiles"' # old
 alias vb='vim -c "ListFiles"' # buffers
