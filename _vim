@@ -32,7 +32,7 @@ alias vo='vim -c "ListFiles"' # old
 alias vb='vim -c "ListFiles"' # buffers
 alias Vb=vb
 alias vn='vim -c "call feedkeys(\";n\")"' # .notes.md
-alias vt='vim -c "call feedkeys(\";t\")"' # .todo.md
+alias vT='vim -c "call feedkeys(\";t\")"' # .todo.md
 alias vp='vim -c "OpenPrevious"' # open previous file
 
 function vF() {
@@ -41,8 +41,15 @@ function vF() {
 alias VF=vF
 
 function Vt() {
-  vim -c ":Vt $1"
+  if [ $# -eq 0 ]; then
+    vim -c "call feedkeys(\";t\")" # .todo.md
+  elif [ $# -eq 1 ]; then
+    vim -c ":Vt $1"
+  else
+    vim -c ":Vt ."
+  fi
 }
+alias vt=Vt
 
 
 # vim: set ft=sh:
