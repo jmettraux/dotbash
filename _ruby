@@ -9,27 +9,22 @@ alias wr='which ruby'
 alias bx='bundle exec'
 
 alias bxr='bundle exec ruby'
-#alias bxs='bundle exec rspec --require ~/.bash/rspec_dot_errors_formatter.rb --format DotErrorsFormatter --out .errors --format d'
-##alias bxs="bundle exec rspec \
-##    --require ~/.bash/rspec_dot_errors_formatter.rb \
-##    --format DotErrorsFormatter --out .errors \
-##    --format d --out .rspec.out \
-##    --format d"
-#alias bxsf="bundle exec rspec \
+#alias bxs="bundle exec rspec \
 #    --require ~/.bash/rspec_dot_errors_formatter.rb \
 #    --format DotErrorsFormatter --out .errors \
-#    --format d \
-#    `head -1 .errors`"
-#alias bxsl="bundle exec rspec \
-#    --require ~/.bash/rspec_dot_errors_formatter.rb \
-#    --format DotErrorsFormatter --out .errors \
-#    --format d \
-#    `tail -1 .errors`"
+#    --format d --out .rspec.out \
+#    --format d"
 alias bxsdr="bundle exec rspec --dry-run"
 alias bxdr="bundle exec rspec --dry-run"
 
 alias bxk='bundle exec rake'
 alias bxw='bundle exec warble'
+
+function bxi() {
+  GS=`ls | grep "\.gemspec$" | head -1`
+  GS=`basename $GS '.gemspec'`
+  bundle exec irb -r "$GS"
+}
 
 alias jru='chruby jruby-1.7.19; ruby -v'
 #alias bo="EDITOR=\"vim -c ':e blank.txt' -c ':NERDTreeToggle'\" bundle open"
