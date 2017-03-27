@@ -87,8 +87,6 @@ alias gadd='git add'
 
 #alias map="ak \"(\bmodule .|\bclass .|\bdef .|\bprotected)\" "
 
-alias vr='pandoc README.md > readme.html && open readme.html'
-
 if [ `uname` == 'Darwin' ]; then
   alias eject='diskutil unmount'
 fi
@@ -98,6 +96,16 @@ alias pc='qpdf --check'
 function pcc() {
   vim -c 'execute "silent !echo " . &fileencoding | q' $1
   qpdf --check $1
+}
+
+function pv() {
+  if [ $# -eq 0 ]; then
+    FN0='README.md'
+  else
+    FN0=$1
+  fi
+  FN1=`basename $FN0 '.md' | awk '{ print tolower($0) }'`.html
+  pandoc $FN0 > $FN1 && open $FN1
 }
 
 
