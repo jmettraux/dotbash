@@ -3,11 +3,17 @@ set editing-mode vi
 
 $if mode=vi
 
-    set keymap vi-command
-    "\C-j": vi-insertion-mode
+  # see https://cnswww.cns.cwru.edu/php/chet/readline/readline.html#SEC13
 
-    set keymap vi-insert
-    "\C-j": vi-movement-mode
+  set keymap vi-command
+  "\C-j": vi-insertion-mode
+  "\C-k": kill-whole-line
+  "\C-h": backward-kill-word
+
+  set keymap vi-insert
+  "\C-j": vi-movement-mode
+  "\C-k": kill-whole-line
+  "\C-h": backward-kill-word
 $endif
 
 # not a Bash configuration, placed it in my dotbash repo anyway
