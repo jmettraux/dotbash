@@ -36,6 +36,7 @@ alias vT='vim -c "call feedkeys(\";t\")"' # .todo.md
 alias vp='vim -c "OpenPrevious"' # open previous file
 alias vr='vim -c "call feedkeys(\";r\")"' # .rspec.out
 alias vR='vim -c "call feedkeys(\";r\")"' # .rspec.out
+alias vd='vim -c "call feedkeys(\";d\")"' # open git diff
 
 function vF() {
   vim -c ":FindFiles $1"
