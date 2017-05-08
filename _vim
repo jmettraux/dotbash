@@ -38,6 +38,7 @@ alias vr='vim -c "call feedkeys(\";r\")"' # .rspec.out
 alias vR='vim -c "call feedkeys(\";r\")"' # .rspec.out
 alias vd='vim -c "call feedkeys(\";d\")"' # open git diff
 alias vl='vim -c "call feedkeys(\";l\")"' # open git log
+alias vm='vim $1 -c "call feedkeys(\";m\")"' # open file then its 'blame'
 
 function vF() {
   vim -c ":FindFiles $1"
