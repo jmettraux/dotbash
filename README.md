@@ -9,9 +9,7 @@ I tend to do
 ```
 cd
 git clone git://github.com/jmettraux/dotbash .bash
-ln -s .bash/bashrc .bashrc
-ln -s .bash/bash_profile .bash_profile
-. .bashrc
+. .bash/install.sh
 ```
 to get started on a system.
 
