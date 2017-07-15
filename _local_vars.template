@@ -6,7 +6,8 @@ export LC_CTYPE=en_US.UTF-8
 #_DOLLAR_CHAR="フ"
   # commented out so that OS decides...
 
-_USER_CHAR="我"
+#_USER_CHAR="我"
+#_USER_CHAR="仁"
 
 # vim: set ft=sh:
 

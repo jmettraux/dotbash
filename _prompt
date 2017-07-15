@@ -79,7 +79,6 @@ elif [[ ${_UN} == *OpenBSD* ]]; then
 fi
 
 _DOLLAR_CHAR="${_DOLLAR_CHAR-${_OS_CHAR-〒}}"
-_USER_CHAR="${_USER_CHAR-人}"
 
 function prompt_symbol () {
   # Set color of dollar prompt based on return value of previous command.
@@ -95,14 +94,8 @@ function prompt_func () {
   last_return_value=$?
   #PS1="\u@\h \w $(parse_git_branch)$(prompt_symbol $last_return_value) "
   #PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \[\033[00m\]$(parse_git_branch)$(prompt_symbol $last_return_value) "
-  user=$USER
-  if [[ $USER == "jmettraux" ]]; then
-    #user="め"
-    #user="我"
-    user=$_USER_CHAR
-  elif [[ $USER == "root" ]]; then
-    user="車"
-  fi
+  user=${_USER_CHAR-${USER}}
+  if [[ $USER == "root" ]]; then user="車"; fi
   PS1="$(date "+%H%M%S") \h \[\033[01;32m\]$user \w \[\033[00m\]$(parse_git_branch)$(prompt_symbol $last_return_value) "
 }
 
