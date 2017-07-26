@@ -42,6 +42,7 @@ alias vd='vim -c "call feedkeys(\";d\")"' # open git diff
 alias vl='vim -c "call feedkeys(\";l\")"' # open git log
 alias vL='vim -c "call feedkeys(\";L\")"' # open git log --branches
 alias vm='vim $1 -c "call feedkeys(\";m\")"' # open file then its 'blame'
+alias vS='vim $1 -c "Scan"'
 
 function vF() {
   vim -c ":FindFiles $1"
