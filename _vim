@@ -60,6 +60,8 @@ function Vt() {
 }
 alias vt=Vt
 
+alias vst='vim -c "Vst"' # show tree of spec/ or test/
+alias vtt=vst
 
 # vim: set ft=sh:
 
