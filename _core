@@ -86,6 +86,8 @@ alias gic='git shortlog -s -n'
 alias gad='git add'
 alias gadd='git add'
 
+alias b='bat'
+
 #alias map="ak \"(\bmodule .|\bclass .|\bdef .|\bprotected)\" "
 
 if [ `uname` == 'Darwin' ]; then
