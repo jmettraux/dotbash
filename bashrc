@@ -1,5 +1,6 @@
 
 test -r ~/.bash/_local_vars && . ~/.bash/_local_vars
+. ~/.bash/_agent
 . ~/.bash/_core
 . ~/.bash/_prompt
 . ~/.bash/_vim
