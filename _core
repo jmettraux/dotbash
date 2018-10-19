@@ -111,6 +111,10 @@ function pv() {
   pandoc $FN0 > $FN1 && open $FN1
 }
 
+function set_term_title() {
+  echo -e '\033]2;'$1'\007'
+}
+
 
 #
 # dotgrade
