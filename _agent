@@ -3,7 +3,7 @@
 # https://yashagarwal.in/posts/2017/12/setting-up-ssh-agent-in-i3/
 
 
-ssh-add -l > /dev/null; if [ $? != 0 ]; then
+ssh-add -l > /dev/null 2>&1; if [ $? != 0 ]; then
 
   if [ -f ~/.ssh/agent.env ]; then
     . ~/.ssh/agent.env > /dev/null
