@@ -32,7 +32,7 @@ function gg() {
 #
 # ls
 
-if [[ -x `which dircolors` ]]; then
+if [[ -x `which dircolors 2>&1` ]]; then
   eval `dircolors` # for "tree"
 fi
 export CLICOLOR=1 # OSX

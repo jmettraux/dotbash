@@ -68,13 +68,13 @@ function parse_git_branch {
 
 _UNAME=`uname`
 _OS_CHAR="不"
-if [ $_UNAME == 'Linux' ]; then
+if [[ $_UNAME == 'Linux' ]]; then
   _OS_CHAR="リ"
-elif [ $_UNAME == 'Darwin' ]; then
+elif [[ $_UNAME == 'Darwin' ]]; then
   _OS_CHAR="ダ"
-elif [ $_UNAME == 'FreeBSD' ]; then
+elif [[ $_UNAME == 'FreeBSD' ]]; then
   _OS_CHAR="フ"
-elif [ $_UNAME == 'OpenBSD' ]; then
+elif [[ $_UNAME == 'OpenBSD' ]]; then
   _OS_CHAR="オ"
 fi
 
