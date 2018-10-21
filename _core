@@ -48,10 +48,10 @@ export CLICOLOR=1 # OSX
 #fi
 
 _LSCOL=''
-if [ `uname` == 'Linux' ]; then
+if [[ $_UNAME == 'Linux' ]]; then
   #_LSCOL='--color'
   _LSCOL='--color=auto'
-elif [ `uname` == 'Darwin' ]; then
+elif [[ $_UNAME == 'Darwin' ]]; then
   _LSCOL='-G'
 fi
 
@@ -60,8 +60,16 @@ alias lh="ls -alh ${_LSCOL}"
 alias llh="ls -alh ${_LSCOL}"
 alias la="ls -A ${_LSCOL}"
 alias l="ls -CF ${_LSCOL}"
-alias t='tree -C'
-alias th='tree -Ch'
+
+if [[ $_UNAME == 'OpenBSD' ]]; then
+  alias t='tree'
+  alias ta='tree -a'
+else
+  alias t='tree -C'
+  alias ta='tree -Ca'
+  alias th='tree -Ch'
+  alias tah='tree -Cah'
+fi
 
 
 #

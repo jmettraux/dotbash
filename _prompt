@@ -66,15 +66,15 @@ function parse_git_branch {
   echo "${state}(${branch})${remote}${COLOR_NONE} "
 }
 
-_UN=`uname -a`
+_UNAME=`uname`
 _OS_CHAR="不"
-if [[ ${_UN} == *Linux* ]]; then
+if [ $_UNAME == 'Linux' ]; then
   _OS_CHAR="リ"
-elif [[ ${_UN} == *Darwin* ]]; then
+elif [ $_UNAME == 'Darwin' ]; then
   _OS_CHAR="ダ"
-elif [[ ${_UN} == *FreeBSD* ]]; then
+elif [ $_UNAME == 'FreeBSD' ]; then
   _OS_CHAR="フ"
-elif [[ ${_UN} == *OpenBSD* ]]; then
+elif [ $_UNAME == 'OpenBSD' ]; then
   _OS_CHAR="オ"
 fi
 
