@@ -2,8 +2,12 @@
 # thanks to
 # https://yashagarwal.in/posts/2017/12/setting-up-ssh-agent-in-i3/
 
-
-ssh-add -l > /dev/null 2>&1; if [ $? != 0 ]; then
+ssh-add -l > /dev/null 2>&1; if [ $? == 2 ]; then
+  #
+  # from ssh-add(1):
+  #
+  # Exit status is 0 on success, 1 if the specified command fails, and 2 if
+  # ssh-add is unable to contact the authentication agent.
 
   if [ -f ~/.ssh/agent.env ]; then
     . ~/.ssh/agent.env > /dev/null
