@@ -1,0 +1,6 @@
+
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
+# vim: set ft=sh:
+
